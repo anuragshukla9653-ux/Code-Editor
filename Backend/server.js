@@ -30,6 +30,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/problems', problemRoutes);
 app.use('/api/submissions', submissionRoutes);
 
+app.get("/", (req, res) => {
+  res.send("API Running 🚀");
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
